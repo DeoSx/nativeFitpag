@@ -1,7 +1,11 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 
-const Detail = (props: any) => {
+interface DetailScreenProps {
+  navigation: any;
+}
+
+const Detail = (props: DetailScreenProps) => {
   return (
     <View>
       <Text>Detail screen</Text>

@@ -1,7 +1,11 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 
-const Home = (props: any) => {
+interface HomeScreenProps {
+  navigation: any;
+}
+
+const Home = (props: HomeScreenProps) => {
   return (
     <View>
       <Text>Home screen</Text>
