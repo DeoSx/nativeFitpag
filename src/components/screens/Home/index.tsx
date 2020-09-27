@@ -5,14 +5,14 @@ interface HomeScreenProps {
   navigation: any;
 }
 
-const Home = (props: HomeScreenProps) => {
+const Home: React.FC<HomeScreenProps> = ({navigation}) => {
   return (
     <View>
       <Text>Home screen</Text>
       <Button
         title="to Detail"
         color="black"
-        onPress={() => props.navigation.push('Detail')}
+        onPress={() => navigation.push('Detail')}
       />
     </View>
   );

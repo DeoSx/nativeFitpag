@@ -5,14 +5,14 @@ interface DetailScreenProps {
   navigation: any;
 }
 
-const Detail = (props: DetailScreenProps) => {
+const Detail: React.FC<DetailScreenProps> = ({navigation}) => {
   return (
     <View>
       <Text>Detail screen</Text>
       <Button
         title="to Home"
         color="#000"
-        onPress={() => props.navigation.push('Home')}
+        onPress={() => navigation.push('Home')}
       />
     </View>
   );

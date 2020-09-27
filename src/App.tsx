@@ -11,7 +11,7 @@ import Detail from './components/screens/Detail';
 
 const Stack = createStackNavigator();
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
