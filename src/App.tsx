@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import {store} from './store';
 
 import Home from './components/screens/Home';
-import Detail from './components/screens/Detail';
+import Auth from './components/screens/Auth';
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Detail" component={Detail} />
+          <Stack.Screen name="Auth" component={Auth} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -1,4 +1,4 @@
-import {AUTH_LOGIN, AUTH_REGISTER} from './../constants';
+import {AUTH_LOGIN, AUTH_REGISTER} from '../constants';
 import {State, AuthActionsType} from '../../types/auth';
 
 const initialState: State = {
