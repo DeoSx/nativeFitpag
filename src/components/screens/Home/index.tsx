@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, ScrollView} from 'react-native';
 
 interface HomeScreenProps {
   navigation: any;
@@ -7,14 +7,16 @@ interface HomeScreenProps {
 
 const Home: React.FC<HomeScreenProps> = ({navigation}) => {
   return (
-    <View>
-      <Text>Home screen</Text>
-      <Button
-        title="to Detail"
-        color="black"
-        onPress={() => navigation.push('Detail')}
-      />
-    </View>
+    <ScrollView>
+      <View>
+        <Text>Home screen</Text>
+        <Button
+          title="to Detail"
+          color="black"
+          onPress={() => navigation.push('Auth')}
+        />
+      </View>
+    </ScrollView>
   );
 };
 
