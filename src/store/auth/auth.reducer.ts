@@ -13,6 +13,7 @@ export default function authReducer(
     case AUTH_LOGIN:
       return {
         ...state,
+        token: action.payload,
       };
     case AUTH_REGISTER:
       return {
