@@ -2,6 +2,7 @@ import {Action} from 'redux';
 import {ThunkAction} from 'redux-thunk';
 
 import axios from '../../helpers/axios.config';
+import {setData} from './../../helpers/asyncStorage';
 
 import {RootState} from '../rootReducer';
 import {authLoginAction} from './auth.actions';
@@ -13,6 +14,8 @@ export function authLogin(
   return async () => {
     try {
       const res = await axios.post('/auth/login', data);
+      await setData('token', res.data.token);
+      authLoginAction(res.data.token);
       console.log(res);
     } catch (e) {
       console.error(e);
